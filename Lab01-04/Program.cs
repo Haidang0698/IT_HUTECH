@@ -105,6 +105,7 @@ namespace Lab01_04
             if (listKQ2.Count() > 0)
             {
                 Show(listKQ2);
+
             }
         }
     }

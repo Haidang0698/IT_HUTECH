@@ -110,7 +110,7 @@ namespace Lab01_02
             }
             else
             {
-                Console.WriteLine("=>There not list of student faculty IT!");
+                Console.WriteLine("=>There not list of student faculty IT!!");
             }
 
         }
