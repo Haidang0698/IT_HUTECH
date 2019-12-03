@@ -18,7 +18,7 @@ namespace Lab01_02
             ShowMaxScoreIT();
             ShowAllIT();
             SearchName();
-            Console.ReadKey();
+            Console.ReadKey(); 
         }
 
         //INPUT LIST

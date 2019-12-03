@@ -104,7 +104,7 @@ namespace Lab01_04
             Console.WriteLine("==========SHOW AREAS COST < 1 BILION AND AREAGE >= 60M^2==========");
             if (listKQ2.Count() > 0)
             {
-                Show(listKQ2);
+                Show(listKQ2); 
 
             }
         }

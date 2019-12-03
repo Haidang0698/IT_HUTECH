@@ -12,7 +12,7 @@ namespace Lab01_03
         public static List<General> generalList = new List<General>();
         static void Main(string[] args)
         {
-            Input();
+            Input(); 
             Console.WriteLine("==========SHOW LIST==========");
             Show(generalList);
             SortList();
