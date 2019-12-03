@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Lab01_03
 {
-    //Phan Hai Dang
+    
     class Program
     {
         static List<QLThongTin> listQLTT;
