@@ -8,19 +8,23 @@ namespace Lab01_04
 {
     abstract class General
     {
-        protected string Address { get; set; }
+        //PROPERTIES
+        public string Address { get; set; }
         public double Cost { get; set; }
         public double Acreage { get; set; }
+        //CONSTRUCTOR WITHOUT PARAMETERS
         protected General()
         {
 
         }
+        //CONSTRUCTOR WITH PARAMETERS
         protected General(string address, double cost, double acreage)
         {
             Address = address;
             Cost = cost;
             Acreage = acreage;
         }
+        //INPUT
         protected void Input()
         {
             Console.Write("Address: ");
@@ -30,9 +34,10 @@ namespace Lab01_04
             Console.Write("Acreage: ");
             Acreage = double.Parse(Console.ReadLine());
         }
+        //SHOW
         protected void Show()
         {
-            Console.Write("\tAddress: " + this.Address + "\t\t|\tCost: " + this.Cost + " VNĐ\t\t|\tAcreage: " + this.Acreage + " m2");
+            Console.Write("Address: " + this.Address + "\t|\tCost: " + this.Cost + " VNĐ\t|\tAcreage: " + this.Acreage + " m2");
         }
     }
 }
