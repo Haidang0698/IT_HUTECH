@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab01_03
+namespace Lab01_04
 {
-    abstract class QLThongTin
+    class QLThongTin
     {
         public QLThongTin(string address, long price, float acreage)
         {
@@ -59,23 +59,22 @@ namespace Lab01_03
 
         public virtual void Input()
         {
-            Console.Write("Address : ");
+            Console.Write("Dia Diem : ");
             this.Address = Console.ReadLine();
             do
             {
-                Console.Write("Price : ");
-            }while(!long.TryParse(Console.ReadLine(),out price));
+                Console.Write("Gia Ban : ");
+            } while (!long.TryParse(Console.ReadLine(), out price));
             do
             {
-                Console.Write("Acreage : ");
+                Console.Write("Dien Tich : ");
             } while (!float.TryParse(Console.ReadLine(), out acreage));
-            Console.WriteLine();
+           
         }
         public virtual void Show()
         {
-            Console.WriteLine("{0}\t\t\t\t{1}VND\t\t\t\t{2}m2\n",this.Address,this.Price,this.Acreage);
+            Console.Write("Dia Diem : {0}\t\t\t\tGia Ban : {1}VND\t\t\t\tDien Tich : {2}m2\t\t\t\t", this.Address, this.Price, this.Acreage);
         }
-
-        public abstract float DonGia();
     }
 }
+

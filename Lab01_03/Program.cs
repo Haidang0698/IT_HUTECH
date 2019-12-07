@@ -20,12 +20,13 @@ namespace Lab01_03
             do
             {
                 Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-                Console.WriteLine("I >>> Imput List ");
-                Console.WriteLine("II >>> Output List ");
-                Console.WriteLine("III >>> Sort List OrderBy for Acreage ");
-                Console.WriteLine("IV >>> Output List Area for Where ");
-                Console.WriteLine("V >>>  The average unit cost ");
+                Console.WriteLine("I ------ Imput List ");
+                Console.WriteLine("II ------ Output List ");
+                Console.WriteLine("III ------ Sort List OrderBy for Acreage ");
+                Console.WriteLine("IV ------ Output List Area for Where ");
+                Console.WriteLine("V ------  The average unit cost ");
                 Console.WriteLine("                  << O >> END                      ");
+                Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
                 do
                 {
                     Console.Write("Input Chose : ");
@@ -73,9 +74,6 @@ namespace Lab01_03
                             Console.WriteLine("Don't Acreage >= 1000m2\n");
                         }
                         break;
-
-                        break;
-
                     case 0:
                         Environment.Exit(0);
                         break;
