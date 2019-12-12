@@ -78,7 +78,7 @@
             this.groupBox1.Size = new System.Drawing.Size(750, 373);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Sinh Viên";
+            this.groupBox1.Text = "Student information";
             // 
             // button4
             // 
@@ -106,8 +106,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 34);
             this.button2.TabIndex = 14;
-            this.button2.Text = "Xóa Chọn";
+            this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button1
             // 
@@ -115,27 +116,28 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(161, 34);
             this.button1.TabIndex = 13;
-            this.button1.Text = "Lưu Đăng Ký";
+            this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
             this.listBox2.Items.AddRange(new object[] {
-            "Cơ Sở Dữ Liệu Nâng Cao"});
+            " "});
             this.listBox2.Location = new System.Drawing.Point(465, 207);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(252, 116);
+            this.listBox2.Size = new System.Drawing.Size(267, 116);
             this.listBox2.TabIndex = 12;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Công Nghệ Phần Mềm",
-            "Hệ Thống Thông Tin",
-            "An Toàn Thông Tin"});
+            "Software Technology",
+            "Information System",
+            "Safety Information"});
             this.comboBox1.Location = new System.Drawing.Point(252, 109);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(305, 24);
@@ -146,8 +148,9 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Items.AddRange(new object[] {
-            "Cơ Sở Dữ Liệu",
-            "PTTK Hệ Thống Thông Tin"});
+            "Database",
+            "Advanced Database",
+            "Information System Design Analysis"});
             this.listBox1.Location = new System.Drawing.Point(128, 207);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(252, 116);
@@ -158,9 +161,9 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(417, 151);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(48, 21);
+            this.checkBox2.Size = new System.Drawing.Size(76, 21);
             this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Nữ";
+            this.checkBox2.Text = "Female";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
@@ -168,9 +171,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(304, 151);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(59, 21);
+            this.checkBox1.Size = new System.Drawing.Size(60, 21);
             this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Nam";
+            this.checkBox1.Text = "Male";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // textBox2
@@ -192,45 +195,45 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(125, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(195, 17);
+            this.label5.Size = new System.Drawing.Size(241, 17);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Chọn Các Môn Học Tham Gia";
+            this.label5.Text = "Select The Subjects To Participate In";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(125, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.Size = new System.Drawing.Size(31, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Giới Tính";
+            this.label4.Text = "Sex";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(125, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 17);
+            this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Chuyên Ngành";
+            this.label3.Text = "Specialized";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(125, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Họ Tên";
+            this.label2.Text = "Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(125, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 17);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Sinh Viên";
+            this.label1.Text = "Student ID";
             // 
             // dataGridView1
             // 
@@ -250,38 +253,38 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Mã Số Sinh Viên";
+            this.Column1.HeaderText = "Student ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 140;
+            this.Column1.Width = 110;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Họ Tên";
+            this.Column2.HeaderText = "Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 160;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Chuyên Ngành";
+            this.Column3.HeaderText = "Specialized";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.Width = 140;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Giới Tính";
+            this.Column4.HeaderText = "Sex";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
+            this.Column4.Width = 80;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Số Môn";
+            this.Column5.HeaderText = "Number Of Subjects";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
+            this.Column5.Width = 170;
             // 
             // Form1
             // 
@@ -291,7 +294,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Type Students";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

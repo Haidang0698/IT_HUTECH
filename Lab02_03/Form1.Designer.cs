@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -193,8 +192,6 @@
             this.lstAccount.FullRowSelect = true;
             this.lstAccount.GridLines = true;
             this.lstAccount.HideSelection = false;
-            this.lstAccount.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
             this.lstAccount.Location = new System.Drawing.Point(13, 272);
             this.lstAccount.Name = "lstAccount";
             this.lstAccount.Size = new System.Drawing.Size(797, 171);
@@ -205,25 +202,32 @@
             // colSTT
             // 
             this.colSTT.Text = "STT";
+            this.colSTT.Width = 40;
             // 
             // colAccID
             // 
+            this.colAccID.Tag = "txtAccID";
             this.colAccID.Text = "Account ID";
-            this.colAccID.Width = 100;
+            this.colAccID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colAccID.Width = 85;
             // 
             // colAccName
             // 
+            this.colAccName.Tag = "txtAccName";
             this.colAccName.Text = "Account Name";
+            this.colAccName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colAccName.Width = 182;
             // 
             // colAccAddress
             // 
             this.colAccAddress.Text = "Address";
-            this.colAccAddress.Width = 130;
+            this.colAccAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colAccAddress.Width = 164;
             // 
             // colAccMoney
             // 
             this.colAccMoney.Text = "Money";
+            this.colAccMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.colAccMoney.Width = 120;
             // 
             // Form1
@@ -271,10 +275,10 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.ListView lstAccount;
         private System.Windows.Forms.ColumnHeader colSTT;
-        private System.Windows.Forms.ColumnHeader colAccID;
-        private System.Windows.Forms.ColumnHeader colAccName;
-        private System.Windows.Forms.ColumnHeader colAccAddress;
-        private System.Windows.Forms.ColumnHeader colAccMoney;
+        public System.Windows.Forms.ColumnHeader colAccID;
+        public System.Windows.Forms.ColumnHeader colAccName;
+        public System.Windows.Forms.ColumnHeader colAccAddress;
+        public System.Windows.Forms.ColumnHeader colAccMoney;
     }
 }
 

@@ -19,5 +19,15 @@ namespace Lab02_04
         {
             InitializeComponent();
         }
+        //EVENT FOR BUTTON SAVE
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+        //EVENT FOR BUTTON DELETE
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
