@@ -10,7 +10,7 @@ namespace Lab01_04
     {
         public static int num;
         public static List<General> generalList = new List<General>();
-        public static List<General> quickListTest = new List<General>();
+        //MAIN
         static void Main(string[] args)
         {
             do

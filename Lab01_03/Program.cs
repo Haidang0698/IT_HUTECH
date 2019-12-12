@@ -79,14 +79,16 @@ namespace Lab01_03
         //CALCULATE THE AVERAGE UNIT COST
         public static void CalcuCost()
         {
-            double KQ = generalList.Average(p => p.Cost / p.Acreage);
+            double KQ = 0;
+            List<General> listKQ3 = generalList.Where(p => p.Acreage > 1000).ToList();
             foreach (General gnr in generalList)
             {
-                if (gnr.Acreage > 1000)
+                if (listKQ3.Count() > 0)
                 {
-                    Console.WriteLine("Result of the average unit cost: " + KQ);
-                }
+                    KQ = gnr.Cost / gnr.Acreage;
+                }KQ++;
             }
+            Console.WriteLine("Result of the average unit cost: " + KQ/listKQ3.Count());
         }
     }
 }
