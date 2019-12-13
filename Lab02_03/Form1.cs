@@ -16,7 +16,6 @@ namespace Lab02_03
         {
             InitializeComponent();
         }
-        List<Account> list = new List<Account>();
         //EVENT FOR ACCOUNT FROM INPUT
         private Account GetAccount()
         {
@@ -30,6 +29,7 @@ namespace Lab02_03
         //List<Account> FROM LISTVIEW
         private List<Account> GetListAccount()
         {
+            List<Account> list = new List<Account>();
             for (int i = 0; i < lstAccount.Items.Count; i++)
             {
                 Account acc = new Account();
@@ -65,18 +65,19 @@ namespace Lab02_03
                 }
                 else //Update Data
                 {
-                    for (int i = 0; i < lstAccount.Items.Count; i++)
-                    {
-                        lstAccount.Items[i].SubItems[2].Text = txtAccName.Text;
-                        lstAccount.Items[i].SubItems[3].Text = txtAccAddress.Text;
-                        lstAccount.Items[i].SubItems[4].Text = txtAccMoney.Text;
-                        MessageBox.Show("Update Data Successfully!!!", "Notification");
-                    }
+                    lstAccount.Items[1].SubItems[2].Text = txtAccName.Text;
+                    lstAccount.Items[1].SubItems[3].Text = txtAccAddress.Text;
+                    lstAccount.Items[1].SubItems[4].Text = (double.Parse(txtAccMoney.Text) + findAccount.Balance).ToString();
+                    double sum = double.Parse(txtAccMoney.Text);
+                    txtTotal.Text = (sum + findAccount.Balance).ToString();
+                    MessageBox.Show("Update Data Successfully!!!", "Notification");
                 }
+                //Clear txt
                 txtAccID.Text = "";
                 txtAccName.Text = "";
                 txtAccAddress.Text = "";
                 txtAccMoney.Text = "";
+                txtTotal.Text = "";
             }
             catch (Exception ex)
             {
@@ -86,26 +87,35 @@ namespace Lab02_03
         //EVENT FOR BUTTON DELETE
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            List<Account> listAccount = GetListAccount();
-            Account findAccount = listAccount.FirstOrDefault(p => p.AccountNo == txtAccID.Text);
-            if (findAccount != null)
+            foreach (ListViewItem item in lstAccount.Items)
             {
-                if (MessageBox.Show("You may want to delete ?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                //Select To Remote
+                if (lstAccount.SelectedItems.Count > 0)
                 {
-                    
-                    MessageBox.Show("Account delete successfully!!!", "Notification");
+                    if (MessageBox.Show("You may want to delete ?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        lstAccount.Items.Remove(lstAccount.SelectedItems[0]);
+                    }
+                }
+                //Enter To Remote
+                else if (item.SubItems[1].Text == txtAccID.Text)
+                {
+                    if (MessageBox.Show("You may want to delete ?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        lstAccount.Items.Remove(item);
+                    }
                 }
             }
-            else
-            {
-                MessageBox.Show("Can't find the account you want to delete or don't have an account you look for!!!", "Notification");
-            }
-  
+            //Clear txt
+            txtAccID.Text = "";
         }
         //EVENT FOR BUTTON EXIT
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("You may want to delete ?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
