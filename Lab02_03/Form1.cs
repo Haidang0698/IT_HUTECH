@@ -106,6 +106,7 @@ namespace Lab02_03
                     }
                 }
             }
+            MessageBox.Show("Account deletion was successful", "Notifcation");
             //Clear txt
             txtAccID.Text = "";
         }
