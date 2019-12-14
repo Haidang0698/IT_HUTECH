@@ -1,4 +1,4 @@
 # IT_HUTECH
 # 17DTHJA3
 # PROGRAMMING ON THE WINDOWS ENVIRONMENT
-# LIST LAB 1 - 6
+# I'm Tran Sy Tai. Nickname is Toki. 20 years old. 
