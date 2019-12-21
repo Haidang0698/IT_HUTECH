@@ -99,25 +99,38 @@ namespace Lab03_02
         //EVENT FOR BUTTON BOLD
         private void btnB_Click(object sender, EventArgs e)
         {
-            richText.SelectionFont = new Font(richText.SelectionFont, FontStyle.Bold);
-            if (btnI.Enabled == true)
-            {
-                btnI_Click(sender, e);
-            }
-            else if (btnU.Enabled == true)
-            {
-                btnU_Click(sender, e);
-            }
+            if(richText.SelectionFont == null)
+                return;
+            FontStyle style = richText.SelectionFont.Style;
+            if (richText.SelectionFont.Bold)
+                style &= ~FontStyle.Bold;
+            else
+                style |= FontStyle.Bold;
+            richText.SelectionFont = new Font(richText.SelectionFont, style);
         }
         //EVENT FOR BUTTON ITALYC
         private void btnI_Click(object sender, EventArgs e)
         {
-            richText.SelectionFont = new Font(richText.SelectionFont, FontStyle.Italic);
+            if (richText.SelectionFont == null)
+                return;
+            FontStyle style = richText.SelectionFont.Style;
+            if (richText.SelectionFont.Italic)
+                style &= ~FontStyle.Italic;
+            else
+                style |= FontStyle.Italic;
+            richText.SelectionFont = new Font(richText.SelectionFont, style);
         }
         //EVENT FOR BUTTON UNDERLINE
         private void btnU_Click(object sender, EventArgs e)
         {
-            richText.SelectionFont = new Font(richText.SelectionFont, FontStyle.Underline);
+            if (richText.SelectionFont == null)
+                return;
+            FontStyle style = richText.SelectionFont.Style;
+            if (richText.SelectionFont.Underline)
+                style &= ~FontStyle.Underline;
+            else
+                style |= FontStyle.Underline;
+            richText.SelectionFont = new Font(richText.SelectionFont, style);
         }
     }
 }

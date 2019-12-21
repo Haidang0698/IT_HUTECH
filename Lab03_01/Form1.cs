@@ -19,14 +19,14 @@ namespace Lab03_01
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.toolStripStatusLabel1.Text = string.Format("Hôm nay là ngày {0} - Bây giờ là {1}", DateTime.Now.ToString("dd / MM / yyyy"), DateTime.Now.ToString("hh:mm:ss tt"));
+            this.toolStripStatusLabel1.Text = string.Format("Hôm nay là ngày {0} - Bây giờ là {1}", DateTime.Now.ToString("dd/MM/yyyy"), DateTime.Now.ToString("hh:mm:ss tt"));
         }
         private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             //Tạo hộp thoại mở file
             OpenFileDialog dlg = new OpenFileDialog();
             //lọc hiện thị các loại file
-            dlg.Filter = "AVI file| *.avi | MPEG File | *.mpeg | Wav File | *.Wav | Midi File | *.midi | Mp4 File | *.mp4 | MP3 | *.mp3";
+            dlg.Filter = "AVI file| *.avi | MPEG File | *.mpeg | Wav File | *.Wav | Midi File | *.midi | Mp4 File | *.mp4 | MP3 | *.mp3|MKV file| *.mkv";
             //hien thi openDialog
             if (dlg.ShowDialog() == DialogResult.OK)
             { 

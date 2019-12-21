@@ -52,6 +52,7 @@ namespace Lab02_04
         }
         private void cbFrameSelectList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lbList.Items.Clear();
             if (cbFrameSelectList.Text == "Software Technology")
             {
                 lbList.Items.Add("Software Testing");
@@ -82,6 +83,9 @@ namespace Lab02_04
             
         }
 
-        
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

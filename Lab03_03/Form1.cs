@@ -16,5 +16,16 @@ namespace Lab03_03
         {
             InitializeComponent();
         }
+        //EVENT FOR BUTTON ADD NEW
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            FormInputStudent form2 = new FormInputStudent(this);
+            if (form2.ShowDialog() != DialogResult.Cancel)
+            {
+                form2.Show();
+            }
+        }
+
+        
     }
 }
